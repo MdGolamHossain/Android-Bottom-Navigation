@@ -1,0 +1,20 @@
+ <!-- Button Navigation Design -->
+<!-- icon size and text size -->
+<!-- res/values/styles.xml -->
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavTextSelected</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavTextNotSelected</item>
+    </style>
+
+    <style name="BottomNavTextNotSelected" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+
+
+    </style>
+
+    <style name="BottomNavTextSelected" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14sp</item>
+
+    </style>
+    <!-- End here navigation design-->
