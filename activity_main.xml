@@ -1,0 +1,49 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"  <!-- Check this line have or not this line is mandatory -->
+    android:background="@color/colorPrimaryVariant">
+
+    <RelativeLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <!-- Content area above bottom nav -->
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigationView" />
+
+        <!-- Bottom navigation bar -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:minHeight="0dp"
+            android:padding="0dp"
+            app:elevation="@dimen/_3sdp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_men"
+            app:itemIconSize="@dimen/_18sdp"
+            app:itemIconTint="@color/bottom_itemicon_tint"
+            app:itemTextColor="@color/bottom_itemicon_tint"
+            app:labelVisibilityMode="labeled"
+            android:background="@color/backgroundColor"
+            app:itemRippleColor="@null"
+            app:itemBackground="@color/backgroundColor"
+            style="@style/BottomNavigationViewStyle"
+            android:fitsSystemWindows="true"
+            android:paddingBottom="8dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
